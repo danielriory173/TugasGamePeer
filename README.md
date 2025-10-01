@@ -6,7 +6,7 @@
 - M. Akbar Rajasa ❤️
 - Daniel Roza Mae Riorry ❤️
 - Celfi Meysa Ayuni 😎
-- Nailah Tsabita E. 😎
+- Nailah Tsabitah E. 😎
 
 Deskripsi:
 Tugas ini adalah membuat program kasir sederhana menggunakan bahasa pemrograman C++. Program ini berfungsi untuk mencatat barang belanjaan, menghitung total harga, menentukan kembalian, dan mencetak struk.
