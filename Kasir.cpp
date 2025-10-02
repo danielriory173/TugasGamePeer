@@ -9,7 +9,12 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
 }
 
 int main(){
-    cout << "Hello, World! saya suka C++" << endl;
-    cout << "Emg iyah? - Daniel" << endl;
+
+
+
+
+
+
+    
     return 0; 
 }
