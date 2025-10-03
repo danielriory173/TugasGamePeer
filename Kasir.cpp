@@ -30,6 +30,13 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
 
     items[8] = "Minyak 1L";
     harga[8] = 20000;
+
+
+    for (int i = 0; i < 9; i++) {
+        cout << "Masukan jumlah " << items[i] << ": ";
+        cin >> jumlahItem[i];
+    }
+
 }
 
 int main(){
