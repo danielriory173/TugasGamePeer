@@ -48,6 +48,24 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
             return total;
     }
 
+    //fungsi buat masukin uang pembayaran
+    double pembayaran (double bayar, double total, double kembalian){
+    cout<<"Masukkan jumlah uang pembayaran : ";
+    cin>>bayar;
+
+    if(bayar<total){
+        cout<<"Maaf uang anda tidak mencukupi, silakan masukkan lagi";
+    }
+    if(bayar>total){
+        kembalian = bayar - total;
+        cout<<"Uang kembalian anda sebesar Rp "<<kembalian;
+    }
+    if(bayar==total){
+        cout<<"Selamat pembayaran anda berhasil!!!";
+    }
+    return bayar-total;
+}
+
 int main(){
 
     cout<<endl;
@@ -73,6 +91,8 @@ int main(){
     cout<<"Total Bayar = Rp "<<total;
     cout<<endl;
 
+    double kembalian;
+    double bayar = pembayaran(bayar,total,kembalian);
     
     return 0; 
 }
