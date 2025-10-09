@@ -47,6 +47,7 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
         }
             return total;
     }
+    
     double diskon (double total){
 
         double kurang;
@@ -55,22 +56,22 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 5%";
             cout<<endl;
 
-        } if (total>= 100000 and total <150000){
+        } else if (total>= 100000 and total <150000){
             kurang = total * 85/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 15%";
             cout<<endl;
 
-        } if (total >=150000 and total <200000){
+        } else if (total >=150000 and total <200000){
             kurang = total * 70/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 30%";
             cout<<endl;
 
-        } if (total>=200000 and total<500000){
+        }else if (total>=200000 and total<500000){
             kurang = total * 60/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 40%";
             cout<<endl;
 
-        }if (total>=500000){
+        }else if (total>=500000){
             kurang = total * 50/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 50%";
             cout<<endl;
@@ -123,6 +124,12 @@ int main(){
     cout<<"Total Bayar = Rp "<<total;
     cout<<endl;
 
+    cout<<endl;
+    double kurang = diskon(total); 
+    cout<<"Jadi total bayar anda saat ini adalah "<<kurang;
+    cout<<endl;
+    cout<<endl;
+    
     double kembalian;
     double bayar = pembayaran(bayar,total,kembalian);
     
