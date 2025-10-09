@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 const int MAX_ITEMS = 100;
 
 void availableItems(string items[], int jumlahItem[], double harga[]) {
@@ -31,7 +30,7 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
     items[8] = "Minyak 1L";
     harga[8] = 20000;
 
-//fungsi buat input barangnya
+
     for (int i = 0; i < 9; i++) {
         cout << "Masukan jumlah " << items[i] << ": ";
         cin >> jumlahItem[i];
@@ -39,14 +38,14 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
 
 }
 
-//fungsi buat hitung totalnya
-double hitungTotal(int jumlahItem[], double harga[],int x){
+    double hitungTotal(int jumlahItem[], double harga[],int x){
         double total = 0;
         for (int i=0; i<x; i++){
             total = total + (jumlahItem[i]*harga[i]);
         }
             return total;
     }
+
     double diskon (double total){
 
         double kurang;
@@ -78,24 +77,21 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
         return kurang;
     }
 
-   
-
-    //fungsi buat masukin uang pembayaran
-    double pembayaran (double bayar, double total, double kembalian){
+    double pembayaran (double bayar, double kurang, double kembalian){
     cout<<"Masukkan jumlah uang pembayaran : ";
     cin>>bayar;
 
-    if(bayar<total){
+    if(bayar<kurang){
         cout<<"Maaf uang anda tidak mencukupi, silakan masukkan lagi";
     }
-    if(bayar>total){
-        kembalian = bayar - total;
+    if(bayar>kurang){
+        kembalian = bayar - kurang;
         cout<<"Uang kembalian anda sebesar Rp "<<kembalian;
     }
-    if(bayar==total){
+    if(bayar==kurang){
         cout<<"Selamat pembayaran anda berhasil!!!";
     }
-    return bayar-total;
+    return bayar-kurang;
 }
 
 int main(){
@@ -123,8 +119,14 @@ int main(){
     cout<<"Total Bayar = Rp "<<total;
     cout<<endl;
 
+  
+    cout<<endl;
+    double kurang = diskon(total); 
+    cout<<"Jadi total bayar anda saat ini adalah "<<kurang;
+    cout<<endl;
+    cout<<endl;
+
     double kembalian;
-    double bayar = pembayaran(bayar,total,kembalian);
-    
+    double bayar = pembayaran(bayar,kurang,kembalian);
     return 0; 
 }
