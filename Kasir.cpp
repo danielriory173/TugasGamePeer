@@ -2,12 +2,13 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_ITEMS = 100;
-//batas item yang bisa ditambahkan yaitu 100 item
 
-void availableItems(string items[], int jumlahItem[], double harga[]) {
-    //funsgi untuk menyimpan item, tidak akan ada nilai yang dihasilkan oleh fungsi ini
+//batas item yang bisa ditambahkan yaitu 100 item
+const int MAX_ITEMS = 100;
+
+//funsgi untuk menyimpan item, tidak akan ada nilai yang dihasilkan oleh fungsi ini
     //di dalam fungsi void ini ada 3 variabel [semuanya array]
+void availableItems(string items[], int jumlahItem[], double harga[]) {
     
     items[0] = "Mie Indomie";
     harga[0] = 3000;
