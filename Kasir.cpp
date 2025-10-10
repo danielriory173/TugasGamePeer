@@ -73,15 +73,17 @@ for (int i = 0; i < x ; i++) {
     cout << "Total Bayar = Rp " << total << endl;
     cout << "===================================\n";
 }
-    
+    //karena double memungkinkan untuk operasi perhitungan yang melibatkan desimal atau pecahan
     double diskon (double total){
 
+        //kurang adalah harga setelah diskon
         double kurang;
         if(total<100000){
             kurang = total * 95/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 5%";
             cout<<endl;
 
+            //jika dikondisi pertama totalnya lebih, bakalan masuk kekondisi selanjutnya
         } else if (total>= 100000 and total <150000){
             kurang = total * 85/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 15%";
