@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -47,6 +48,25 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
         }
             return total;
     }
+
+    //Fungsi Cetak Struk
+void printStruk(string items[], int jumlahItem[], double harga[], int x, double total) {
+cout << "\n========== STRUK BELANJA ==========\n";
+cout << "Nama Barang\tJumlah\tHarga\tSubtotal\n";
+cout << "___________________________________\n";
+
+for (int i = 0; i < x ; i++) {
+    double subtotal = jumlahItem[i] * harga[i];
+    if (jumlahItem[i] > 0) {
+        cout << items[i] << "\t" << jumlahItem[i];
+        cout << "\t" << harga[i];
+        cout << "\t" << subtotal << endl;
+        }
+    }
+    cout << "___________________________________\n";
+    cout << "Total Bayar = Rp " << total << endl;
+    cout << "===================================\n";
+}
     
     double diskon (double total){
 
@@ -82,41 +102,24 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
    
 
     //fungsi buat masukin uang pembayaran
-    double pembayaran (double bayar, double total, double kembalian){
+    double pembayaran (double bayar, double kurang, double kembalian){
     cout<<"Masukkan jumlah uang pembayaran : Rp ";
     cin>>bayar;
     
-    if(bayar<total){
+    if(bayar<kurang){
         cout<<"Maaf uang anda tidak mencukupi, silakan masukkan lagi";
     }
-    if(bayar>total){
-        kembalian = bayar - total;
+    if(bayar>kurang){
+        kembalian = bayar - kurang;
         cout<<"Uang kembalian anda sebesar Rp "<<kembalian;
     }
-    if(bayar==total){
+    if(bayar==kurang){
         cout<<"Selamat pembayaran anda berhasil!!!";
     }
-    return bayar-total;
+    return bayar-kurang;
 }
 
-//Fungsi Cetak Struk
-void printStruk(string items[], int jumlahItem[], double harga[], int x, double total) {
-cout << "\n========== STRUK BELANJA ==========\n";
-cout << "Nama Barang\tJumlah\tHarga\tSubtotal\n";
-cout << "___________________________________\n";
 
-for (int i = 0; i < x ; i++) {
-    double subtotal = jumlahItem[i] * harga[i];
-    if (jumlahItem[i] > 0) {
-        cout << items[i] << "\t" << jumlahItem[i];
-        cout << "\t" << harga[i];
-        cout << "\t" << subtotal << endl;
-        }
-    }
-    cout << "___________________________________\n";
-    cout << "Total Bayar = Rp " << total << endl;
-    cout << "===================================\n";
-}
 
 int main(){
 
@@ -140,9 +143,9 @@ int main(){
     double total = hitungTotal(jumlahItem,harga,9);
 
     cout<<endl;
-    cout<<"Total Bayar = Rp "<<total;
-    cout<<endl;
 
+    //Berfungsi untuk memanggil struk
+    printStruk(items, jumlahItem, harga, 9, total);
 
     cout<<endl;
     double kurang = diskon(total); 
@@ -151,10 +154,7 @@ int main(){
     cout<<endl;
     
     double kembalian;
-    double bayar = pembayaran(bayar,total,kembalian);
-
-    //Berfungsi untuk memanggil struk
-    printStruk(items, jumlahItem, harga, 9, total);
+    double bayar = pembayaran(bayar,kurang,kembalian);
 
     
     return 0; 
