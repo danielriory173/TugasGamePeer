@@ -14,19 +14,19 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
     items[2] = "Telur 1Kg";
     harga[2] = 22000;
 
-    items[3] = "Gula";
+    items[3] = "Gula Pasir";
     harga[3] = 16000;
 
-    items[4] = "Garam";
+    items[4] = "Garam Kasar";
     harga[4] = 10000;
 
-    items[5] = "Kopi";
+    items[5] = "Kopi Bubuk";
     harga[5] = 15000;
 
     items[6] = "Beras 5Kg";
     harga[6] = 150000;
 
-    items[7] = "Galon";
+    items[7] = "Galon Aqua";
     harga[7] = 20000;
 
     items[8] = "Minyak 1L";
