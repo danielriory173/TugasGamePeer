@@ -37,8 +37,7 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
     items[8] = "Minyak 1L";
     harga[8] = 20000;
 
-//fungsi buat input barangnya
-    //looping ini berfungsi untuk menginputkan barang dari item pertama hingga akhir, karena array input dari 0 hingga 8
+    //fungsi looping ini berfungsi untuk menginputkan barang dari item pertama hingga akhir, karena array input dari 0 hingga 8
     for (int i = 0; i < 9; i++) {
         cout << "Masukan jumlah " << items[i] << ": ";
         cin >> jumlahItem[i];
