@@ -3,8 +3,12 @@
 using namespace std;
 
 const int MAX_ITEMS = 100;
+//batas item yang bisa ditambahkan yaitu 100 item
 
 void availableItems(string items[], int jumlahItem[], double harga[]) {
+    //funsgi untuk menyimpan item, tidak akan ada nilai yang dihasilkan oleh fungsi ini
+    //di dalam fungsi void ini ada 3 variabel [semuanya array]
+    
     items[0] = "Mie Indomie";
     harga[0] = 3000;
     
@@ -33,6 +37,7 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
     harga[8] = 20000;
 
 //fungsi buat input barangnya
+    //looping ini berfungsi untuk menginputkan barang dari item pertama hingga akhir, karena array input dari 0 hingga 8
     for (int i = 0; i < 9; i++) {
         cout << "Masukan jumlah " << items[i] << ": ";
         cin >> jumlahItem[i];
