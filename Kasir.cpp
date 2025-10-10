@@ -1,15 +1,11 @@
-
 #include <iostream>
 using namespace std;
 
 
-//batas item yang bisa ditambahkan yaitu 100 item
+// Max items 100
 const int MAX_ITEMS = 100;
 
-//funsgi untuk menyimpan item, tidak akan ada nilai yang dihasilkan oleh fungsi ini
-    //di dalam fungsi void ini ada 3 variabel [semuanya array]
 void availableItems(string items[], int jumlahItem[], double harga[]) {
-    
     items[0] = "Mie Indomie";
     harga[0] = 3000;
     
@@ -37,7 +33,7 @@ void availableItems(string items[], int jumlahItem[], double harga[]) {
     items[8] = "Minyak 1L";
     harga[8] = 20000;
 
-    //fungsi looping ini berfungsi untuk menginputkan barang dari item pertama hingga akhir, karena array input dari 0 hingga 8
+//fungsi buat input barangnya
     for (int i = 0; i < 9; i++) {
         cout << "Masukan jumlah " << items[i] << ": ";
         cin >> jumlahItem[i];
@@ -72,17 +68,15 @@ for (int i = 0; i < x ; i++) {
     cout << "Total Bayar = Rp " << total << endl;
     cout << "===================================\n";
 }
-    //karena double memungkinkan untuk operasi perhitungan yang melibatkan desimal atau pecahan
+    
     double diskon (double total){
 
-        //kurang adalah harga setelah diskon
         double kurang;
         if(total<100000){
             kurang = total * 95/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 5%";
             cout<<endl;
 
-            //jika dikondisi pertama totalnya lebih, bakalan masuk kekondisi selanjutnya
         } else if (total>= 100000 and total <150000){
             kurang = total * 85/100;
             cout<<"Selamat anda mendapatkan potongan harga sebanyak 15%";
@@ -162,6 +156,8 @@ int main(){
     
     double kembalian;
     double bayar = pembayaran(bayar,kurang,kembalian);
+
+    //Nyoba git pull
 
     
     return 0; 
