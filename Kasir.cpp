@@ -3,7 +3,7 @@ using namespace std;
 
 
 // Max items 100
-const int MAX_ITEMS = 100;
+int MAX_ITEMS = 100;
 
 void availableItems(string items[], int jumlahItem[], double harga[]) {
     items[0] = "Mie Indomie";
