@@ -52,7 +52,7 @@ double hitungTotal(int jumlahItem[], double harga[],int x){
 
     //Fungsi Cetak Struk
 void printStruk(string items[], int jumlahItem[], double harga[], int x, double total) {
-cout << "\n========== STRUK BELANJA ==========\n";
+cout << "\n========== STRUK BELANJA ARCADITA STORE ==========\n";
 cout << "Nama Barang\tJumlah\tHarga\tSubtotal\n";
 cout << "___________________________________\n";
 
